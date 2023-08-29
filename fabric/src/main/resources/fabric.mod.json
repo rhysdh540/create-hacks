@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "Example Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [ "Me!" ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "Insert License Here",
+  "icon": "assets/examplemod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [ "net.examplegroup.examplemod.fabric.ExampleModFabric" ],
+    "modmenu": [ "net.examplegroup.examplemod.fabric.ModMenuIntegration" ]
+  },
+  "mixins": [
+    "examplemod.mixins.json",
+    "examplemod-common.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${minecraft_version}",
+    "fabricloader": ">=${fabric}",
+    "fabric-api": ">=${fabric_api}",
+    "create": "${create_fabric}"
+  },
+  "custom": {
+    "modmenu": {
+      "parent": {
+        "id": "create"
+      },
+      "links": {
+        "Modrinth": "https://modrinth.com/mod/your-modid-here",
+        "CurseForge": "https://curseforge.com/minecraft/mc-mods/your-modid-here",
+        "Discord": "https://discord.gg/your-invite-here"
+      }
+    }
+  }
+}
