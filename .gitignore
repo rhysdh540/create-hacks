@@ -10,6 +10,7 @@ bin/
 libs/
 
 build.properties
+/common/src/main/resources/*.accesswidener
 
 .classpath
 .project

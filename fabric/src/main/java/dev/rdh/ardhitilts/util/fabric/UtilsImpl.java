@@ -44,7 +44,7 @@ public class UtilsImpl {
 		#if PRE_CURRENT_MC_1_19_2
 		ModLoadingContext.registerConfig(Ardhitilts.ID, type, spec);
 		#elif POST_CURRENT_MC_1_20_1
-		ForgeConfigRegistry.INSTANCE.register(ExampleMod.ID, type, spec);
+		ForgeConfigRegistry.INSTANCE.register(Ardhitilts.ID, type, spec);
 		#endif
 	}
 

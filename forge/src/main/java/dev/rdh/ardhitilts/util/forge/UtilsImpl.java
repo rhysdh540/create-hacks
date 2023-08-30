@@ -1,8 +1,6 @@
 package dev.rdh.ardhitilts.util.forge;
 
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import dev.rdh.ardhitilts.Ardhitilts;
-import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.util.MavenVersionStringHelper;
@@ -15,11 +13,11 @@ import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.forgespi.language.IModInfo;
 
 import java.nio.file.Path;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
+#if PRE_CURRENT_MC_1_19_2
 @SuppressWarnings("UnstableApiUsage")
+#endif
 public class UtilsImpl {
 	public static String getVersion() {
 		String versionString = "UNKNOWN";
@@ -47,12 +45,6 @@ public class UtilsImpl {
 
 	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
 		ModLoadingContext.get().registerConfig(type, spec);
-	}
-
-	public static Set<LiteralArgumentBuilder<CommandSourceStack>> commands = new HashSet<>();
-
-	public static void registerCommand(LiteralArgumentBuilder<CommandSourceStack> command) {
-		commands.add(command);
 	}
 
 	public static Attribute reach() {

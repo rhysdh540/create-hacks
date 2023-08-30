@@ -12,6 +12,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public class GoggleOverlayRendererMixin {
 	@Redirect(method = "renderOverlay", at = @At(value = "INVOKE", target = "Lcom/simibubi/create/content/equipment/goggles/GogglesItem;isWearingGoggles(Lnet/minecraft/world/entity/player/Player;)Z"))
 	private static boolean definitelyWearingGoggles(Player player) {
-		return ArdhitiltsConfig.client().goggles.get() || GogglesItem.isWearingGoggles(player);
+		return ArdhitiltsConfig.INSTANCE.goggles.get() || GogglesItem.isWearingGoggles(player);
 	}
 }
