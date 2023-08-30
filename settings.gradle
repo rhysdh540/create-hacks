@@ -12,4 +12,4 @@ include("common")
 include("fabric")
 include("forge")
 
-rootProject.name = "create-example-addon"
+rootProject.name = "ardhitilts"

@@ -1,17 +1,18 @@
 modLoader = "javafml"
 loaderVersion = "[${forge},)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+issueTrackerURL = "https://github.com/rhysdh540/create-hacks/issues"
+license = "GPL-3.0"
 
 [[mods]]
 modId = "${id}"
 version = "${version}"
-displayName = "Example Mod"
-authors = "Me!"
+displayName = "ardhitilts"
+authors = "rdh"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Do you or a loved one suffer from ardhitilts?
 '''
 logoFile = "icon.png"
+displayTest = "IGNORE_ALL_VERSION"
 
 [[dependencies.${id}]]
 modId = "forge"

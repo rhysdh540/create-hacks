@@ -2,23 +2,28 @@
   "schemaVersion": 1,
   "id": "${id}",
   "version": "${version}",
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [ "Me!" ],
+  "name": "Ardhitilts",
+  "description": "Do you or a loved one suffer from ardhitilts?",
+  "authors": [ "rdh" ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/rhysdh540/create-hacks",
+    "sources": "https://github.com/rhysdh540/create-hacks",
+    "issues": "https://github.com/rhysdh540/create-hacks/issues"
   },
-  "license": "Insert License Here",
-  "icon": "assets/examplemod/icon.png",
+  "license": "GPL-3.0",
+  "icon": "assets/ardhitilts/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [ "net.examplegroup.examplemod.fabric.ExampleModFabric" ],
-    "modmenu": [ "net.examplegroup.examplemod.fabric.ModMenuIntegration" ]
+    "client": [
+      "dev.rdh.ardhitilts.fabric.ArdhitiltsFabric"
+    ],
+    "modmenu": [
+      "dev.rdh.ardhitilts.fabric.ModMenuIntegration"
+    ]
   },
   "mixins": [
-    "examplemod.mixins.json",
-    "examplemod-common.mixins.json"
+    "ardhitilts.mixins.json",
+    "ardhitilts-common.mixins.json"
   ],
   "depends": {
     "minecraft": "${minecraft_version}",
@@ -32,9 +37,7 @@
         "id": "create"
       },
       "links": {
-        "Modrinth": "https://modrinth.com/mod/your-modid-here",
-        "CurseForge": "https://curseforge.com/minecraft/mc-mods/your-modid-here",
-        "Discord": "https://discord.gg/your-invite-here"
+        "Discord": "https://discord.gg/GeGm3DRDWY"
       }
     }
   }

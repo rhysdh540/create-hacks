@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.rdh.ardhitilts.forge.mixin",
+  "package": "dev.rdh.ardhitilts.fabric.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
   ],
