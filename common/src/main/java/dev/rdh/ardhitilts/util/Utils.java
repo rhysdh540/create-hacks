@@ -1,27 +1,16 @@
 package dev.rdh.ardhitilts.util;
 
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+import com.simibubi.create.foundation.networking.SimplePacketBase;
+
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.world.entity.ai.attributes.Attribute;
+
 import net.minecraftforge.fml.config.IConfigSpec;
 import net.minecraftforge.fml.config.ModConfig;
-
-import java.nio.file.Path;
 
 public class Utils {
 	@ExpectPlatform
 	public static String getVersion() {
-		throw new AssertionError();
-	}
-
-	@ExpectPlatform
-	public static boolean isDevEnv() {
-		throw new AssertionError();
-	}
-
-	@ExpectPlatform
-	public static void registerCommand(LiteralArgumentBuilder<CommandSourceStack> command) {
 		throw new AssertionError();
 	}
 
@@ -31,7 +20,7 @@ public class Utils {
 	}
 
 	@ExpectPlatform
-	public static Path configDir() {
+	public static void sendPacket(SimplePacketBase packet) {
 		throw new AssertionError();
 	}
 

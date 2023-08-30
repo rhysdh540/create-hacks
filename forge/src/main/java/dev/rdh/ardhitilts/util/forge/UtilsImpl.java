@@ -1,23 +1,22 @@
 package dev.rdh.ardhitilts.util.forge;
 
+import com.simibubi.create.AllPackets;
+import com.simibubi.create.foundation.networking.SimplePacketBase;
+
 import dev.rdh.ardhitilts.Ardhitilts;
+
 import net.minecraft.world.entity.ai.attributes.Attribute;
+
 import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.common.util.MavenVersionStringHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.IConfigSpec;
 import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.loading.FMLLoader;
-import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.forgespi.language.IModInfo;
 
-import java.nio.file.Path;
 import java.util.List;
 
-#if PRE_CURRENT_MC_1_19_2
-@SuppressWarnings("UnstableApiUsage")
-#endif
 public class UtilsImpl {
 	public static String getVersion() {
 		String versionString = "UNKNOWN";
@@ -35,14 +34,6 @@ public class UtilsImpl {
 		return versionString;
 	}
 
-	public static boolean isDevEnv() {
-		return !FMLLoader.isProduction();
-	}
-
-	public static Path configDir() {
-		return FMLPaths.CONFIGDIR.get();
-	}
-
 	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
 		ModLoadingContext.get().registerConfig(type, spec);
 	}
@@ -53,5 +44,9 @@ public class UtilsImpl {
 		#elif PRE_CURRENT_MC_1_19_2
 		return ForgeMod.REACH_DISTANCE.get();
 		#endif
+	}
+
+	public static void sendPacket(SimplePacketBase packet) {
+		AllPackets.getChannel().sendToServer(packet);
 	}
 }

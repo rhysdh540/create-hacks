@@ -1,22 +1,19 @@
 package dev.rdh.ardhitilts.util.fabric;
 
 import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
+
+import com.simibubi.create.AllPackets;
+import com.simibubi.create.foundation.networking.SimplePacketBase;
+
 import dev.rdh.ardhitilts.Ardhitilts;
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
+
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.commands.CommandSourceStack;
+
 import net.minecraft.world.entity.ai.attributes.Attribute;
+
+import net.minecraftforge.api.ModLoadingContext;
 import net.minecraftforge.fml.config.IConfigSpec;
 import net.minecraftforge.fml.config.ModConfig;
-
-#if PRE_CURRENT_MC_1_19_2
-import net.minecraftforge.api.ModLoadingContext;
-#elif POST_CURRENT_MC_1_20_1
-import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
-#endif
-
-import java.nio.file.Path;
 
 public class UtilsImpl {
 	public static String getVersion() {
@@ -26,18 +23,6 @@ public class UtilsImpl {
 				.getMetadata()
 				.getVersion()
 				.getFriendlyString();
-	}
-
-	public static boolean isDevEnv() {
-		return FabricLoader.getInstance().isDevelopmentEnvironment();
-	}
-
-	public static Path configDir() {
-		return FabricLoader.getInstance().getConfigDir();
-	}
-
-	public static void registerCommand(LiteralArgumentBuilder<CommandSourceStack> command) {
-		CommandRegistrationCallback.EVENT.register((dispatcher, dedicated, selection) -> dispatcher.register(command));
 	}
 
 	public static void registerConfig(ModConfig.Type type, IConfigSpec<?> spec) {
@@ -50,5 +35,9 @@ public class UtilsImpl {
 
 	public static Attribute reach() {
 		return ReachEntityAttributes.REACH;
+	}
+
+	public static void sendPacket(SimplePacketBase packet) {
+		AllPackets.getChannel().sendToServer(packet);
 	}
 }

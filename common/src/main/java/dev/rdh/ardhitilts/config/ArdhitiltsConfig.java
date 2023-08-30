@@ -24,11 +24,11 @@ public class ArdhitiltsConfig extends ConfigBase {
 	public final ConfigFloat reach = f(0, 0, "reach", Comments.reach);
 	public final ConfigBool goggles = b(false, "goggles", Comments.goggles);
 	public final ConfigFloat trainMoveDistance = f(24, 0, "trainMoveDistance", Comments.trainMoveDistance);
-	public final ConfigFloat flySpeed = f(1, 1, 30, "flySpeed", Comments.flySpeed);
+	public final ConfigFloat flySpeed = f(5, 1, 30, "flySpeed", Comments.flySpeed);
 
 	public final ConfigGroup toggles = group(1, "toggles", Comments.group);
 	public final ConfigBool fly = b(false, "fly", Comments.fly);
-	public final ConfigBool noFall = b(false, "fly", Comments.noFall);
+	public final ConfigBool noFall = b(false, "noFall", Comments.noFall);
 
 	private static class Comments {
 		static final String reach = "Reach distance. Adds to your base reach.";
