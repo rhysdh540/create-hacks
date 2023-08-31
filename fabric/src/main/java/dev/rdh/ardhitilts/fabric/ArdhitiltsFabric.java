@@ -9,12 +9,12 @@ import io.github.fabricators_of_create.porting_lib.event.client.KeyInputCallback
 import net.fabricmc.api.ClientModInitializer;
 
 #if PRE_CURRENT_MC_1_19_2
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraftforge.api.fml.event.config.ModConfigEvents;
 #elif POST_CURRENT_MC_1_20_1
 import fuzs.forgeconfigapiport.api.config.v2.ModConfigEvents;
 #endif
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 
 public class ArdhitiltsFabric implements ClientModInitializer {
     @Override
