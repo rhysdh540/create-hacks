@@ -11,7 +11,11 @@ import net.fabricmc.loader.api.FabricLoader;
 
 import net.minecraft.world.entity.ai.attributes.Attribute;
 
+#if PRE_CURRENT_MC_1_19_2
 import net.minecraftforge.api.ModLoadingContext;
+#elif POST_CURRENT_MC_1_20_1
+import fuzs.forgeconfigapiport.api.config.v2.ForgeConfigRegistry;
+#endif
 import net.minecraftforge.fml.config.IConfigSpec;
 import net.minecraftforge.fml.config.ModConfig;
 
