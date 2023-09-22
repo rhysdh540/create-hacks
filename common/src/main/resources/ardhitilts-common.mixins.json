@@ -4,7 +4,7 @@
   "package": "dev.rdh.ardhitilts.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
-    "GoggleOverlayRendererMixin",
+    "GogglesItemMixin",
     "TrainRelocatorMixin"
   ],
   "injectors": {
